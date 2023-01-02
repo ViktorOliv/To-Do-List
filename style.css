@@ -1,28 +1,28 @@
 body {
     display: flex;
     font-size: 10px;
-}
-
-.standardSize {
-    font-size: 2.5em;
+    margin: auto 15px;
 }
 
 main{
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
     margin: 5% auto;
-    padding: 10px;
+    padding: 2em;
     border: 2px solid #0f9cd9;
     box-shadow: 1px 1px 5px #0f9cd9;
     border-radius: 1em;
     width: min-content;
 }
 
+.standardSize {
+    font-size: 2.5em;
+}
+
 #addTaskBox {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: max-content;
     width: max-content;
 }
@@ -39,5 +39,44 @@ main{
     border: 1px solid #1d63f0;
     box-shadow: 1px 1px 5px #1d71f0;
     border-radius: 0.25em;
+    cursor: pointer;
+}
 
+#pushTask:hover {
+    opacity: 0.9;
+    transition-duration: 0.15s;
+}
+
+#pushTask:active {
+    background-color: #115ed1;
+
+}
+
+#taskArea {
+
+    margin-top: 1em;
+}
+
+.taskBlock {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.task {
+    flex: 0 0 80%;
+    padding: 0.2em 1em;
+    margin-top: 1em;
+}
+
+.delete {
+    flex: 0 1 20%;
+    margin-top: 1em;
+    padding: 0.2em 0.5em;
+    max-height: max-content;
+    max-width: max-content;
+}
+
+.delete>img {
+    max-height: 1.5em;
 }

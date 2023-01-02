@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    font-size: 10px;
+}
+
+.standardSize {
+    font-size: 2.5em;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% auto;
+    padding: 10px;
+    border: 2px solid #0f9cd9;
+    box-shadow: 1px 1px 5px #0f9cd9;
+    border-radius: 1em;
+    width: min-content;
+}
+
+#addTaskBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: max-content;
+}
+
+#enterTask {
+    
+}
+
+#pushTask {
+    display: flex;
+    color: whitesmoke;
+    margin-left: 0.35em;
+    background-color: #1d71f0;
+    border: 1px solid #1d63f0;
+    box-shadow: 1px 1px 5px #1d71f0;
+    border-radius: 0.25em;
+
+}

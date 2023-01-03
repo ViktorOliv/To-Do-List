@@ -17,6 +17,10 @@ function addTask() {
         return;
     }
 }
+
+function deleteTask() {
+    console.log("asdasd");
+}
     
     deleteTaskButton.forEach ( (del) => {
         del.addEventListener("click", () => {
@@ -26,7 +30,10 @@ function addTask() {
     });
 
 
-
+for (let i = 0; i < deleteTaskButton.length; i++) {
+    const element = array[i];
+    element.addEventListener("click", deleteTask);
+}
 
 
 

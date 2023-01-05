@@ -26,7 +26,6 @@ function deleteTask(event) {
     if (event.target.dataset.action === 'delete'){
         event.target.parentNode.remove();
     }
-    
 }
 
 

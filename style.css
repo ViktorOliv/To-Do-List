@@ -43,13 +43,12 @@ main{
 }
 
 #pushTask:hover {
-    opacity: 0.9;
+    opacity: 0.85;
     transition-duration: 0.15s;
 }
 
 #pushTask:active {
     background-color: #115ed1;
-
 }
 
 #taskArea {
@@ -59,7 +58,7 @@ main{
 .taskBlock {
     display: flex;
     justify-content: space-between;
-
+    min-width: 33em;
 }
 
 .task {
@@ -76,7 +75,19 @@ main{
     padding: 0.2em 0.5em;
     max-height: 3em;
     max-width: max-content;
-    
+    background-color: rgba(223, 35, 35, 0.651);
+    border: 1px solid rgba(219, 25, 25, 0.651);
+    border-radius: 4px;
+}
+
+.delete:hover {
+    opacity: 0.85;
+    transition-duration: 0.15s;
+}
+
+.delete:active {
+    opacity: 1.1;
+    transition-duration: 0.15s;
 }
 
 .delete>img {

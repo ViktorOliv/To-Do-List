@@ -17,14 +17,10 @@ function addTask() {
         return;
     }
 }
-
-function deleteTask() {
-    console.log("asdasd");
-}
-    
+/////////////////////////////////////////////
     deleteTaskButton.forEach ( (del) => {
-        del.addEventListener("click", () => {
-            this.parentNode.remove();
+        del.addEventListener("click", (e) => {
+            e.target.parentNode.remove();
             console.log("asdasd");
         });
     });
@@ -35,6 +31,10 @@ for (let i = 0; i < deleteTaskButton.length; i++) {
     element.addEventListener("click", deleteTask);
 }
 
+function deleteTask() {
+    this.parentNode.remove();
+    console.log("asdasd");
+}
 
 
 

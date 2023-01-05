@@ -21,7 +21,6 @@ function addTask() {
 task.addEventListener("click", deleteTask);
 
 function deleteTask(event) {
-
     if (event.target.dataset.action === 'delete'){
         let parentNode = event.target.closest(".taskBlock");
         parentNode.remove();

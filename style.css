@@ -42,7 +42,7 @@ main{
 #pushTask {
     display: flex;
     color: whitesmoke;
-    margin-left: 0.35em;
+    margin-left: 0.75em;
     background-color: #1d71f0;
     border: 1px solid #1d63f0;
     box-shadow: 1px 1px 5px #1d71f0;

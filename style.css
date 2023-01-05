@@ -28,7 +28,15 @@ main{
 }
 
 #enterTask {
-    
+    border: 2px solid #1d63f0;
+    border-radius: 0.25em;
+    box-shadow: 0.5px 0.5px 3.5px #1d71f0;
+}
+
+#enterTask:focus {
+    outline: none;
+    border: 2px solid #0949c9;
+    box-shadow: 2px 2px 5px #1d71f0;
 }
 
 #pushTask {
@@ -77,6 +85,7 @@ main{
     max-width: max-content;
     background-color: rgba(223, 35, 35, 0.651);
     border: 1px solid rgba(219, 25, 25, 0.651);
+    box-shadow: 1px 1px 5px rgba(219, 25, 25, 0.651);
     border-radius: 4px;
 }
 
@@ -90,6 +99,7 @@ main{
     transition-duration: 0.15s;
 }
 
-.delete>img {
+.delete img{
+    pointer-events: none;
     max-height: 1.5em;
 }

@@ -11,32 +11,22 @@ function addTask() {
     let value = inputValue.value;
     if (value !== "") {
         task.innerHTML +=        
-        "<div class='taskBlock'> <div class='task standardSize'>" + value + "</div>     <button class='delete'> <img src='free-icon-recycle-bin-3156999.png' alt='Delete'></button>  </div>";
+        "<div class='taskBlock'> <div class='task standardSize'>" + value + "</div>     <button class='delete' data-action='delete'> <img src='free-icon-recycle-bin-3156999.png' alt='Delete'></button>  </div>";
         inputValue.value = "";
     } else {
         return;
     }
 }
-/////////////////////////////////////////////
-    deleteTaskButton.forEach ( (del) => {
-        del.addEventListener("click", (e) => {
-            e.target.parentNode.remove();
-            console.log("asdasd");
-        });
-    });
 
+task.addEventListener("click", deleteTask);
 
-for (let i = 0; i < deleteTaskButton.length; i++) {
-    const element = array[i];
-    element.addEventListener("click", deleteTask);
+function deleteTask(event) {
+    console.log(event.target);
+
+    if (event.target.dataset.action === 'delete'){
+        event.target.parentNode.remove();
+    }
+    
 }
-
-function deleteTask() {
-    this.parentNode.remove();
-    console.log("asdasd");
-}
-
-
-
 
 

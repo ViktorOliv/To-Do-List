@@ -2,7 +2,7 @@ let inputValue = document.querySelector("#enterTask");
 let button = document.querySelector("#pushTask");
 let task = document.querySelector("#taskArea") ;
 
-inputValue.addEventListener("keyup", addTaskEnter);
+// inputValue.addEventListener("keyup", addTaskEnter);
 button.addEventListener("click", addTask);
 task.addEventListener("click", deleteTask);
 task.addEventListener("click", completeTask);

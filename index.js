@@ -11,13 +11,13 @@ if (localStorage.getItem("tasksHTML")) {
     task.innerHTML = localStorage.getItem("tasksHTML");
 }
 
-function addTaskEnter(e) {
-    if (e.key === "Enter" || e.keyCode === 229) {
-        addTask();
-    };
+// function addTaskEnter(e) {
+//     if (e.key === "Enter" || e.keyCode === 229) {
+//         addTask();
+//     };
 
-    saveHTMLtoLS();
-}
+//     saveHTMLtoLS();
+// }
 
 function addTask() {
     let value = inputValue.value;

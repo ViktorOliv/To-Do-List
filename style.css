@@ -61,6 +61,7 @@ main{
 
 #taskArea {
     margin-top: 1em;
+    padding: 0em 6em;
 }
 
 .taskBlock {
@@ -73,6 +74,38 @@ main{
     flex: 0 0 80%;
     padding: 0.2em 1em;
     margin-top: 1em;
+    margin-left: -1em; margin-right: 0.5em;
+    
+}
+
+.completeTask {
+    display: flex;
+    flex: 0 1 20%;
+    align-items: center;
+    margin-top: 2em;
+    margin-right: 1em;
+    padding: 0.2em 0.5em;
+    max-height: 3em;
+    max-width: max-content;
+    background-color: rgba(223, 35, 35, 0.651);
+    border: 1px solid rgba(219, 25, 25, 0.651);
+    box-shadow: 1px 1px 5px rgba(219, 25, 25, 0.651);
+    border-radius: 4px;
+}
+
+.completeTask:hover {
+    opacity: 0.85;
+    transition-duration: 0.15s;
+}
+
+.completeTask:active {
+    opacity: 1.1;
+    transition-duration: 0.15s;
+}
+
+.completeTask img{
+    pointer-events: none;
+    max-height: 2em;
 }
 
 .delete {
@@ -103,3 +136,4 @@ main{
     pointer-events: none;
     max-height: 1.5em;
 }
+

@@ -7,11 +7,16 @@ button.addEventListener("click", addTask);
 task.addEventListener("click", deleteTask);
 task.addEventListener("click", completeTask);
 
+if (localStorage.getItem("tasksHTML")) {
+    task.innerHTML = localStorage.getItem("tasksHTML");
+}
 
 function addTaskEnter(e) {
     if (e.key === "Enter" || e.keyCode === 229) {
         addTask();
     };
+
+    saveHTMLtoLS();
 }
 
 function addTask() {
@@ -23,6 +28,8 @@ function addTask() {
     } else {
         return;
     }
+
+    saveHTMLtoLS();
 }
 
 function deleteTask(event) {
@@ -30,6 +37,8 @@ function deleteTask(event) {
         let parentNode = event.target.closest(".taskBlock");
         parentNode.remove();
     }
+
+    saveHTMLtoLS();
 }
 
 function completeTask(event) {
@@ -56,4 +65,12 @@ function completeTask(event) {
             taskClasses.remove("completeTaskActive");
         }
     }
+
+    saveHTMLtoLS();
 }
+
+function saveHTMLtoLS() {
+    localStorage.setItem("tasksHTML", task.innerHTML);
+
+}
+

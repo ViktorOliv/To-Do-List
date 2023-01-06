@@ -75,7 +75,6 @@ main{
     padding: 0.2em 1em;
     margin-top: 1em;
     margin-left: -1em; margin-right: 0.5em;
-    
 }
 
 .completeTask {
@@ -87,25 +86,30 @@ main{
     padding: 0.2em 0.5em;
     max-height: 3em;
     max-width: max-content;
-    background-color: rgba(223, 35, 35, 0.651);
-    border: 1px solid rgba(219, 25, 25, 0.651);
-    box-shadow: 1px 1px 5px rgba(219, 25, 25, 0.651);
+    background-color: rgba(68, 240, 46, 0.651);
+    border: 1px solid rgba(68, 240, 46, 0.651);
+    box-shadow: 1px 1px 5px rgba(68, 240, 46, 0.651);
     border-radius: 4px;
 }
 
 .completeTask:hover {
-    opacity: 0.85;
+    opacity: 0.75;
     transition-duration: 0.15s;
 }
 
 .completeTask:active {
-    opacity: 1.1;
+    opacity: 3;
     transition-duration: 0.15s;
 }
 
 .completeTask img{
     pointer-events: none;
     max-height: 2em;
+}
+
+.completeTaskActive {
+    color: gray;
+    text-decoration: line-through;
 }
 
 .delete {

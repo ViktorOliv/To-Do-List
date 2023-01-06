@@ -1,12 +1,10 @@
 let inputValue = document.querySelector("#enterTask");
 let button = document.querySelector("#pushTask");
 let task = document.querySelector("#taskArea") ;
-let deleteTaskButton = document.querySelectorAll(".delete");
-
-    console.log(deleteTaskButton);
 
 button.addEventListener("click", addTask);
 task.addEventListener("click", deleteTask);
+task.addEventListener("click", completeTask);
 
 function addTask() {
     let value = inputValue.value;
@@ -28,7 +26,28 @@ function deleteTask(event) {
 
 function completeTask(event) {
     if (event.target.dataset.action === 'complete'){
-        console.log(event.target.closest(".completeTask"));
+        let completeTask = event.target.closest(".taskBlock").querySelector(".task");
+        let taskClasses = completeTask.classList;
+        let active = true;
+
+        for (let i = 0; i < taskClasses.length; i++) {
+            const taskClass = taskClasses[i];
+
+            if (taskClass === "completeTaskActive") 
+            {
+                active = false;
+                break;
+            }
+        }
+
+        if (active === true) {
+            taskClasses.add("completeTaskActive");
+        }
+
+        if (active === false) {
+            taskClasses.remove("completeTaskActive");
+        }
+
     }
 }
 

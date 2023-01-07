@@ -2,22 +2,18 @@ let inputValue = document.querySelector("#enterTask");
 let button = document.querySelector("#pushTask");
 let task = document.querySelector("#taskArea") ;
 
-// inputValue.addEventListener("keyup", addTaskEnter);
 button.addEventListener("click", addTask);
 task.addEventListener("click", deleteTask);
 task.addEventListener("click", completeTask);
 
-if (localStorage.getItem("tasksHTML")) {
-    task.innerHTML = localStorage.getItem("tasksHTML");
+getItemInLocalStorage();
+
+
+function getItemInLocalStorage() {
+    if (localStorage.getItem("tasksHTML")) {
+        task.innerHTML = localStorage.getItem("tasksHTML");
+    }
 }
-
-// function addTaskEnter(e) {
-//     if (e.key === "Enter" || e.keyCode === 229) {
-//         addTask();
-//     };
-
-//     saveHTMLtoLS();
-// }
 
 function addTask() {
     let value = inputValue.value;
